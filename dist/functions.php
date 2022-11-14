@@ -44,44 +44,4 @@ function undersider() {
 
 
      register_post_type( 'samarbejdspartnere', array(
-          'labels' => array(
-               'name' => 'Samarbejdspartnere',
-               'singular_name' => _x('samarbejdspartnere', 'post type singular name'),
-               'add_new' => _x('Ny samarbejdspartnere, HUSK at vælg billede', 'samarbejdspartnere'),
-               'edit_item' => __('Rediger samarbejdspartnere'),
-               'new_item' => __('Ny samarbejdspartner, HUSK at vælg billede'),
-               'all_items' => __('Alle samarbejdspartnere'),
-               'view_item' => __('Vis samarbejdspartnere'),
-               'search_items' => __('Søg samarbejdspartnere'),
-               'not_found' =>  __('Ingen samarbejdspartnere fundet'),
-               'not_found_in_trash' => __('Ingen samarbejdspartnere i papirskurven'), 
-               'parent_item_colon' => '',
-               'menu_name' => __('Partnere')
-               ),
-               'menu_icon' => 'dashicons-buddicons-buddypress-logo',
-               'public' => true,
-               'publicly_queryable' => true,
-               'show_ui' => true, 
-               'show_in_menu' => true, 
-               'query_var' => true,
-               'rewrite' => true,
-               'capability_type' => 'post',
-               'has_archive' => true, 
-               'hierarchical' => false,
-               'menu_position' => null,
-               'supports' => array( 'title', 'editor', 'template', 'author', 'thumbnail', 'excerpt', 'comments' ),
-               'categories', 'Template' => true,  
-          ) ,  
-     
-     );
-     
-
-    
-
-
-};
-
-
-add_action( 'init', 'undersider' )
-
-?>
+          'labels' =>array( 'name' => 'Samarbejdspartnere', 'singular_name' => _x('samarbejdspartnere', 'post type singular name'), 'add_new' => _x('Ny samarbejdspartnere, HUSK at vælg billede', 'samarbejdspartnere'), 'edit_item' => __('Rediger samarbejdspartnere'), 'new_item' => __('Ny samarbejdspartner, HUSK at vælg billede'), 'all_items' => __('Alle samarbejdspartnere'), 'view_item' => __('Vis samarbejdspartnere'), 'search_items' => __('Søg samarbejdspartnere'), 'not_found' => __('Ingen samarbejdspartnere fundet'), 'not_found_in_trash' => __('Ingen samarbejdspartnere i papirskurven'), 'parent_item_colon' => '', 'menu_name' => __('Partnere') ), 'menu_icon' => 'dashicons-buddicons-buddypress-logo', 'public' => true, 'publicly_queryable' => true, 'show_ui' => true, 'show_in_menu' => true, 'query_var' => true, 'rewrite' => true, 'capability_type' => 'post', 'has_archive' => true, 'hierarchical' => false, 'menu_position' => null, 'supports' => array( 'title', 'editor', 'template', 'author', 'thumbnail', 'excerpt', 'comments' ), 'categories', 'Template' => true, ) , ); }; add_action( 'init', 'undersider' ) ?>

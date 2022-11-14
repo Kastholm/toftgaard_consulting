@@ -1,0 +1,14 @@
+.employee {
+  display: grid;
+  grid-auto-flow: column;
+  .person {
+    height: 22em;
+    width: 50vw;
+    background-image: url("https://gpkollund.com/media/whicq5ru/gp_kollund_210322_01216.jpg?rxy=0.577142144431048,0.3082922568166219&width=640&height=414&quality=90&rnd=132954515089170000");
+    background-size: cover;
+    background-position: center;
+  }
+  .info {
+    width: 50vw;
+  }
+}

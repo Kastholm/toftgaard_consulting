@@ -1,0 +1,128 @@
+@import "../default.scss";
+@import "../mix-ins.scss";
+
+.content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  position: relative;
+  background: $main;
+  height: 12em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include mq_tablet {
+    background: #2e2b6ec8;
+    height: 18em;
+  }
+}
+
+.hero h2 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 10px;
+  line-height: 1;
+}
+
+.hero p {
+  position: relative;
+  z-index: 1;
+
+  line-height: 1.4;
+}
+
+/* ========================= */
+
+
+.subBanner {
+  position: relative;
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  @include mq_phone {
+    & :nth-child(1n + 1) {
+      grid-column: 1;
+    }
+  }
+  span {
+    display: block;
+    .border-top {
+      border-bottom: 2px dotted black;
+      margin-top: 5em;
+      @include mq_tablet {
+        margin-top: 1em;
+      }
+    }
+  }
+  .text {
+    border-right: 2px solid black;
+    width: 50vw;
+    @include mq_phone {
+      width: 100vw;
+    }
+    .innertext {
+      max-width: 35em;
+      padding: 4em 2em;
+      margin: 0 auto;
+      height: fit-content;
+      @include mq_phone {
+        margin: 0;
+      }
+      * {
+        margin: 0;
+      }
+    }
+  }
+  h1 {
+    line-height: 3.5rem;
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  .img {
+    width: 50vw;
+    background-image: url("https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    clip-path: ellipse(98% 99% at 98% 1%);
+    @include mq_phone {
+      width: 100vw;
+      height: 20em;
+      position: relative;
+      border-right: 2px solid black;
+      &::after {
+        content: "";
+        border-top: 2px dotted black;
+        width: 100vw;
+        position: absolute;
+      }
+    }
+  }
+}
+.border-bot {
+  position: relative;
+  border-bottom: 2px dotted black;
+  margin-bottom: 5em;
+  @include mq_phone {
+    margin-bottom: 4em;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 49.9%;
+    height: 5em;
+    top: 0;
+    border-right: 2px solid black;
+  }
+  &::after {
+    content: "Toftegaard Consulting";
+    position: absolute;
+    margin-top: 2em;
+    left: 5%;
+  }
+}

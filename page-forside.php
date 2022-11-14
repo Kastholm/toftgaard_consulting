@@ -45,16 +45,31 @@ get_header()
 </div>
 
 
-
+<div class='owl-slider'>
+		<h3>Vi samarbejder med</h3>
+		<div class='corner'> </div>
+		<div class="owl-carousel owl-theme">
+		<?php $Partnere = new WP_Query(array(
+  'post_per_page' => 2,
+  'post_type' => 'samarbejdspartnere',
+  'order' => 'ASC'
+)); 
+while($Partnere -> have_posts()) {
+  $Partnere->the_post(); ?>
+			<div class="item itemTwo"><img width="200" height="150" src=<?php echo the_post_thumbnail_url() ?> alt=<?php echo get_the_excerpt() ?> /></div>
+			<?php
+}
+?> 
+		</div>
+	</div>
 
 
 <div class='textField'>
-<div><h2>Speed and flexi that suits your needs</h2>
-<div class='corner'> </div>
+<div><h2>Speed and flexi bility that suits your needs</h2>
 <div class="stats">
       <div class="stats__item is-visible" data-module-reveal="up" data-reveal-delay="">
       <div class="stats__content">
-                <p class="stats__stat">30 års</p>
+                <p class="stats__stat">10</p>
 
                 <p class="stats__description">years of eCommerce sales growth in just 10 weeks</p>
       </div>
@@ -63,7 +78,7 @@ get_header()
           </div>
       <div class="stats__item is-visible" data-module-reveal="up" data-reveal-delay="">
       <div class="stats__content">
-                <p class="stats__stat">+3000</p>
+                <p class="stats__stat">51%</p>
 
                 <p class="stats__description margin-none">transportation cost savings with more flexible fulfillment locations</p>
       </div>
@@ -73,7 +88,7 @@ get_header()
   </div>
 </div>
 
-<div class='topPageInfo'>
+<div>
   <p>GP Kollund provides a broad variety of logistics solutions for both German and Danish customers. We value trust, speed, and flexibility in every business relation.
   
   <br><br>
@@ -81,7 +96,8 @@ get_header()
   We cater both small and big companies, seasonal activities, and heavy, daily operations worth €1 million in pallets. Our success derives from an in-depth understanding of our customers’ logistic needs and a lean setup based on thirteen logistic units.
   
    
-  
+  <br><br>
+  You can combine those thirteen units however you want, thanks to an agile drag-and-drop system. Learn more about the system here.
   
    <br>
   
@@ -94,23 +110,22 @@ get_header()
 <div class="serviceChoose">
 
 <nav class='serviceToggle'>
-  
     <span>
         
-        <p>Logistic Analyse</p>
+        <p>Punkt 1</p>
 
         <input type="checkbox" class='checkOne' checked>
     </span>
     <span>
-    <p>Quick-Analyse</p>
+    <p>Punkt 1</p>
 <input type="checkbox" class='checkTwo'>
     </span>
     <span>
-    <p>Paletten Management</p>
+    <p>Punkt 1</p>
 <input type="checkbox" class='checkThree'>
     </span>
     <span>
-    <p>Verpackung</p>
+    <p>Punkt 1</p>
 <input type="checkbox" class='checkThree'>
     </span>
 </nav>
@@ -205,19 +220,15 @@ function toggleOutput() {
         checkFieldText[2].style.color = '#fbfbfb';
         checkField[3].style.borderBottom = "1px solid gray";
         checkFieldText[3].style.color = '#fbfbfb';
-        headerBox.innerHTML = 'Logistic Analyse';
+        headerBox.innerHTML = 'Paletten Management';
         
-        textBox.innerHTML = `Toftegaard Consulting tilbyder mere end 30 års know-how i emballage- og logistikoptimering.
-Grundet vores markedsindsigt fra flere hundrede logistikanalyser, har vi i dag +3000 implementeringer sat op. <br><br>
-Høj kvalitet og succesrate for vores kunder med No Cure – No Pay metoden. Hvis vi ikke kan optimere din nuværende logistik, er vores brugte arbejdstid uden beregning.
-
-`
+        textBox.innerHTML = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto doloremque aspernatur deserunt nulla, dolorem fuga veniam enim velit sunt quae quod aperiam cumque, officiis molestiae ratione recusandae nesciunt eligendi voluptatum repellat tempora temporibus! Ut dignissimos a  .`
          imgBox.src = "https://images.unsplash.com/photo-1554620121-59e7f3f6e3a4?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ";
 
          return;
     }
     if(checkBox[1].checked){
-        headerBox.innerHTML = 'Quick-Analyse';
+        headerBox.innerHTML = 'Title2';
         checkField[0].style.borderBottom = "1px solid gray";
         checkFieldText[0].style.color = '#fbfbfb';
         checkField[1].style.borderBottom = "1px solid #7dc4af";
@@ -229,16 +240,15 @@ Høj kvalitet og succesrate for vores kunder med No Cure – No Pay metoden. Hvi
         checkFieldText[3].style.color = '#fbfbfb';
         
         
-        textBox.innerHTML = `Ikke alle virksomheder indser deres muligheder for optimering og har sikkert selv implementeret tiltag for at optimere logistikken igennem årene.<br><br>
-En hurtig analyse tjener formålet at få et klart overblik over din emballage, pallehåndtering og interne processer på et øjeblik.
-Quick analysen udføres på 1 dag.`
-
+        textBox.innerHTML = `GP Kollund provides a broad variety of logistics solutions for both German and Danish customers. We value trust, speed, and flexibility in every business relation.
+   
+    We cater both small and big companies, seasonal activities, and heavy, daily operations worth €1 million ’`
          imgBox.src = "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
          checkBox[0].checked = false;
          return;
     }
     else if(checkBox[2].checked){
-        headerBox.innerHTML = 'Paletten Management';
+        headerBox.innerHTML = 'Title3';
         checkField[0].style.borderBottom = "1px solid gray";
         checkFieldText[0].style.color = '#fbfbfb';
         checkField[1].style.borderBottom = "1px solid gray";
@@ -247,7 +257,7 @@ Quick analysen udføres på 1 dag.`
         checkFieldText[2].style.color = '#7dc4af';
         checkField[3].style.borderBottom = "1px solid gray";
         checkFieldText[3].style.color = '#fbfbfb';
-        textBox.innerHTML = `Toftegaard Consulting tilbyder en omfattende viden indenfor pallehåndtering og optimering af emnet. Vi er i stand til at restaurere, upcycle, og udveksle standardiserede paller til de internationale klassifikationssystemer for europæiske paller (A, B, C og D paller).<br><br> Gør dine daglige logistiske problemer med paller til en smart forretning. Vi sørger for at dine paller lagres, vurderes på kvalitet og købes på stedet. Skift besværet ud med indtægt.`
+        textBox.innerHTML = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae id saepe quisquam rerum animi architecto quidem enim assumenda excepturi maiores aspernatur fuga nesciunt eligendi mollitia voluptatem dicta deserunt earum totam dolorum facere at, adipisci voluptas.`
         
          imgBox.src = "https://images.pexels.com/photos/3057960/pexels-photo-3057960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
          checkBox[0].checked = false;
@@ -300,7 +310,7 @@ Quick analysen udføres på 1 dag.`
 
 
 
-
+<h1>KeyPoints</h1>
 
 
 
@@ -354,7 +364,7 @@ jQuery(document).ready(function ($) {
  -->
 
 
- <!-- <section id="our-solutions">
+ <section id="our-solutions">
       <div class="select-solutions">
         <h2>Toftgaard Consulting</h2>
         <div>fordele</div>
@@ -402,7 +412,7 @@ efter implementering</p>
         </div>
       </div>
       <button class='btn-24'>aaaa</button>
-    </section> -->
+    </section>
 
 
 

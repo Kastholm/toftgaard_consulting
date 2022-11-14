@@ -1,0 +1,153 @@
+@import "../default.scss";
+$bg: #fff;
+$text: #2e2e2eb9;
+$gray: #3b3b3b;
+$lightgray: #5a5a5a;
+$blue: #22436e;
+
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+.faqs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(35%, 25rem), 1fr));
+  position: relative;
+  margin: 0 -0.5em;
+
+  .img-container {
+    display: grid;
+    place-content: center;
+  }
+  img {
+    width: 22em;
+    margin: 0 auto;
+    @include mq_tablet {
+      margin-top: 3em;
+    }
+    @include mq_phone {
+      margin-top: 3em;
+    }
+  }
+}
+
+.container-body {
+  margin: 0;
+  padding: 0;
+  /* background-image: url('https://i.ibb.co/hf5yCtW/bg-stor.gif'); */
+  color: $gray;
+  display: flex;
+  min-height: fit-content;
+}
+
+.container {
+  margin: 0 auto;
+  margin-bottom: 2em;
+  padding: 4rem;
+  border-radius: 20px;
+  width: 55em;
+  transform: scale(0.9);
+  background-color: #f8f3ef;
+  @include mq_phone {
+    padding: 4rem 4rem 0rem 4rem;
+  }
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid $lightgray;
+    background-color: #f6f6f6;
+    margin: 1em 0;
+    padding: 0.7em;
+    button[aria-expanded="true"] {
+      border-bottom: 1px solid $blue;
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100% !important;
+    padding: 1em 0;
+    color: $text;
+    font-size: 1.05rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $blue;
+      &::after {
+        cursor: pointer;
+        color: $blue;
+        border: 1px solid $blue;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded="true"] {
+    color: $blue;
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      background-color: #fbfbfb;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+      padding: 0.5em;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    background-color: $white;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      margin: 2em 0;
+    }
+  }
+}

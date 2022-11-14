@@ -1,0 +1,72 @@
+@import "../default.scss";
+.owl-slider {
+  background-position: bottom;
+  margin: 0 -0.5em;
+  /* box-shadow: 2px 2px 0px hsl(0deg 0% 0% / 0.28); */
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 2em;
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+  @include mq_phone {
+    /* margin-top: 8.9em; */
+    padding: 2em 0 4em 0;
+    background-color: none;
+  }
+  .corner {
+    position: absolute;
+    transform: rotate(360deg);
+    filter: brightness(85%);
+    width: 23em;
+    height: 20em;
+    background-color: $main;
+    overflow: hidden;
+    @include mq_tablet {
+      width: 9em;
+    }
+
+    @include mq_phone {
+      width: 9em;
+      display: none;
+    }
+    left: 0;
+    top: 0px;
+    clip-path: polygon(71% 0, 0 0, 0 100%);
+    z-index: 1;
+  }
+  h3 {
+    font-size: 1.4rem;
+    /* font-family: Brown, sans-serif; */
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 1.5em 0;
+    position: relative;
+    z-index: 2;
+  }
+  img {
+  }
+  .item {
+    background-color: rgb(255, 255, 255);
+    /* display: grid;
+place-content: center; */
+    padding: 1em 0;
+    @include mq_phone {
+      /* width: 100vw; */
+    }
+  }
+  .item img {
+    transform: scale(0.8);
+    @include mq_tablet {
+    }
+    @include mq_phone {
+      transform: scale(0.8);
+      margin: 0 auto;
+    }
+  }
+  .itemTwo {
+    background-color: #ededed;
+  }
+}
