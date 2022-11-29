@@ -42,7 +42,7 @@ get_header()
 <nav class='serviceToggle'>
     <span>
         
-        <p>Logistic Analyse</p>
+        <p>Logistik Analyse</p>
 
         <input type="checkbox" class='checkOne' checked>
     </span>
@@ -51,7 +51,7 @@ get_header()
 <input type="checkbox" class='checkTwo'>
     </span>
     <span>
-    <p>Paletten Management</p>
+    <p>Pallehåndtering</p>
 <input type="checkbox" class='checkThree'>
     </span>
     <span>

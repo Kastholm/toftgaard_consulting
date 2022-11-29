@@ -1,9 +1,21 @@
+@import "../mix-ins.scss";
+@import "../default.scss";
 .boxContainer {
   position: relative;
   display: grid;
+  
+  .top-fix {
+    margin-top: 3em !important;
+    @include mq_tablet{
+      margin-top: 0;
+    }
+  }
+  /* background-color: $sub; */
   place-content: center;
   grid-auto-flow: column;
+  margin: 0 auto;
   height: 28em;
+  max-width: 1640px;
   @include mq_tablet {
     height: fit-content;
     padding: 2em 0;
@@ -11,6 +23,7 @@
   & div:nth-child(1) {
     grid-column: 1;
     width: 50vw;
+    max-width: 40em;
     @include mq_tablet {
       width: 80vw;
     }
@@ -18,14 +31,14 @@
   @include mq_tablet {
     & div:nth-child(1n + 1) {
       grid-column: 1;
-      width: 80vw;
+      width: 90vw;
     }
   }
   .containerImg {
     text-align: center;
     & span:nth-child(1) {
       position: absolute;
-      top: 0%;
+      top: 0;
       left: 0;
       img {
         width: 25em;
@@ -59,6 +72,7 @@
   & div:nth-child(1) {
     grid-column: 2;
     width: 50vw;
+    max-width: 40em;
     @include mq_tablet {
       width: 80vw;
     }
@@ -66,7 +80,7 @@
   @include mq_tablet {
     & div:nth-child(1n + 1) {
       grid-column: 1;
-      width: 80vw;
+      width: 90vw;
     }
   }
   .containerImg {

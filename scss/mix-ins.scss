@@ -2,7 +2,7 @@
 
 // Alt under 560px
 @mixin mq_phone() {
-  @media only screen and (max-width: 40em) and (min-width: 15em) {
+  @media only screen and (max-width: 35em) and (min-width: 15em) {
     @content;
   }
 }

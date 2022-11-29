@@ -13,13 +13,13 @@ get_header()
 	<span class="field text">
 		<div class="border-top"></div>
 	<span class='innertext'>
-		<h1>Verpackung, Lorem ipsum dolor sit. Lorem ipsum</h1>
-		<h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae.
+		<h1><b>Mangler Overskrift</b> dolor sit. Lorem ipsum sit</h1>
+		<h2><b>Mangler tekst</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem alias labore non quo excepturi. Libero, iusto rem. Facere, obcaecati dolore!
 		</h2>
 	</span>
 	
 	</span>
-	<span class="field img">
+	<span style=' background-image: url("https://www.folklor-mersch.lu/images/sursite/Photos-Coming-Soon.jpg"); background-size: cover;' class="field img">
 
 	
 	</span>
@@ -36,13 +36,13 @@ get_header()
         <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/bgeff.webp" alt="">
     </span>
     <span data-aos="fade-down-right">
-        <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/Morten.webp" alt="">
+        <img src="https://www.folklor-mersch.lu/images/sursite/Photos-Coming-Soon.jpg" alt="">
     </span>
     
     </div>
     <div class="containerText">
-        <h2>Morten</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, animi? Magnam voluptatibus voluptate error deleniti in assumenda omnis ut fugiat animi, earum minus vel ex excepturi nobis explicabo. Laboriosam perferendis voluptatem deserunt quae adipisci cum consequuntur, molestiae harum ex voluptates!</p>
+        <h2>Henrik</h2>
+        <p><b>Mangler tekst</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magnam alias eum molestiae similique consequatur qui dolorem quia, repudiandae adipisci.</p>
         <button class='btn-24'>sup</button>
     </div>
 </div>
@@ -55,13 +55,13 @@ get_header()
         </span>
         <span data-aos="fade-down-left"
         >
-            <img src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <img src="https://www.folklor-mersch.lu/images/sursite/Photos-Coming-Soon.jpg" alt="">
         </span>
         
     </div>
     <div class="containerText">
-        <h2>Morten</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, animi? Magnam voluptatibus voluptate error deleniti in assumenda omnis ut fugiat animi, earum minus vel ex excepturi nobis explicabo. Laboriosam perferendis voluptatem deserunt quae adipisci cum consequuntur, molestiae harum ex voluptates!</p>
+        <h2>Torben</h2>
+        <p><b>Mangler tekst</b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magnam alias eum molestiae similique consequatur qui dolorem quia, repudiandae adipisci.</p>
         <button class='btn-24'>sup</button>
     </div>
 </div>

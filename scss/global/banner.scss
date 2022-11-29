@@ -1,6 +1,13 @@
 @import "../default.scss";
 @import "../mix-ins.scss";
 
+.qa-banner {
+  background-image: url("//localhost:3000/toftgaard_consulting/wp-content/themes/toftgarrd_consulting/dist/img/Quick-Analyse.webp");
+}
+.la-banner {
+  background-image: url("//localhost:3000/toftgaard_consulting/wp-content/themes/toftgarrd_consulting/dist/img/Logistik-analyse.webp");
+}
+
 .content {
   max-width: 800px;
   text-align: center;
@@ -38,13 +45,12 @@
 
 /* ========================= */
 
-
 .subBanner {
   position: relative;
   display: grid;
   place-content: center;
   grid-auto-flow: column;
-  @include mq_phone {
+  @include mq_tablet {
     & :nth-child(1n + 1) {
       grid-column: 1;
     }
@@ -62,15 +68,17 @@
   .text {
     border-right: 2px solid black;
     width: 50vw;
-    @include mq_phone {
+    max-width: 45em;
+    @include mq_tablet {
       width: 100vw;
+      max-width: none;
     }
     .innertext {
       max-width: 35em;
       padding: 4em 2em;
       margin: 0 auto;
       height: fit-content;
-      @include mq_phone {
+      @include mq_tablet {
         margin: 0;
       }
       * {
@@ -79,22 +87,43 @@
     }
   }
   h1 {
+    font-family: Reckless, Georgia, Times, Times New Roman, serif;
     line-height: 3.5rem;
     font-size: 3rem;
+    @include mq_tablet {
+      font-size: 3.3rem;
+    }
+    @include mq_phone {
+      font-size: 3.5rem;
+      line-height: 3.9rem;
+    }
   }
   h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding-top: 1em;
+    font-family: poppins, sans-serif;
+    @include mq_tablet {
+      font-size: 1.3rem;
+    }
+    @include mq_phone {
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+    }
   }
 
   .img {
     width: 50vw;
-    background-image: url("https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    max-width: 45em;
+    background-size: cover;
     clip-path: ellipse(98% 99% at 98% 1%);
-    @include mq_phone {
+    @include mq_tablet {
       width: 100vw;
+      max-width: none;
       height: 20em;
       position: relative;
       border-right: 2px solid black;
+      clip-path: ellipse(100% 100% at 100% 1%);
       &::after {
         content: "";
         border-top: 2px dotted black;
@@ -120,9 +149,13 @@
     border-right: 2px solid black;
   }
   &::after {
-    content: "Toftegaard Consulting";
+    content: "(logo) Toftgaard Consulting";
     position: absolute;
     margin-top: 2em;
     left: 5%;
+    @include mq_phone {
+      font-size: 1.3rem;
+      margin-top: 1.3em;
+    }
   }
 }

@@ -15,13 +15,16 @@ get_header()
 	<span class="field text">
 		<div class="border-top"></div>
 	<span class='innertext'>
-		<h1>Verpackung, Lorem ipsum dolor sit. Lorem ipsum</h1>
-		<h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, vitae.
+		<h1>Quick-Analyse, af jeres logistiske opsætning</h1>
+		<h2>Ikke alle virksomheder er overbeviste om deres optimerings potentiale. Ofte har de allerede selv gennem
+årerne foretaget forskellige tiltag til optimeringer i deres logistik og derfor mødes vi ofte også med en vis
+skepsis, når vi fremlægger vore teser.
+
 		</h2>
 	</span>
 	
 	</span>
-	<span class="field img">
+	<span class="field img qa-banner">
 
 	
 	</span>
@@ -32,88 +35,197 @@ get_header()
 
 
 
-<div class="serviceChoose">
 
-<nav class='serviceToggle'>
-    <span>
+
+<!-- <script>
+let field = document.querySelector('.serviceOutput');
+let btn = document.querySelector('.btn-24');
+let imgBox = document.querySelector('.toggleImg');
+let textBoxFull = document.querySelectorAll('.toggleText');
+let textBox = document.querySelector('.toggleText p');
+let headerBox = document.querySelector('.toggleText h2');
+let checkField = document.querySelectorAll('.serviceToggle span');
+let checkFieldText = document.querySelectorAll('.serviceToggle span p');      
+let checkBox = document.querySelectorAll('.serviceToggle input');   
+let imgTitle = document.querySelector('.imgTitle');
+let statOne = document.querySelector('.statOne');
+let statOneT = document.querySelector('.statOneText');
+let statTwo = document.querySelector('.statTwo');
+let statTwoT = document.querySelector('.statTwoText')  
+let link = document.querySelector('.link');
+
+checkField[0].style.borderBottom = "1px solid #7dc4af";
+        checkField[1].style.borderBottom = "1px solid gray";
+        checkField[2].style.borderBottom = "1px solid gray";
+        /* checkField[3].style.borderBottom = "1px solid gray"; */
         
-        <p>Logistic Analyse</p>
-
-        <input type="checkbox" class='checkOne' checked>
-    </span>
-    <span>
-    <p>Quick-Analyse</p>
-<input type="checkbox" class='checkTwo'>
-    </span>
-    <span>
-    <p>Paletten Management</p>
-<input type="checkbox" class='checkThree'>
-    </span>
-    <span>
-    <p>Verpackung</p>
-<input type="checkbox" class='checkThree'>
-    </span>
-</nav>
-<div class="serviceOutput">
-<!-- <div class='toggleImage'></div> -->
-<div data-aos="fade-down-left" class="promo" style="--overlay-color: #2e2b6e">
-    <div class="image-wrapper"><img class='toggleImg' src="https://images.unsplash.com/photo-1554620121-59e7f3f6e3a4?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ" /></div>
-    <h2 class="title" data-cta="Get out there →">Nightlife</h2>
-</div>
-<div class='toggleText'>
-  <h3>Titelfelt  lorem ipsum</h3>
-    <h2></h2>
+checkField[0].addEventListener('click', () => { 
+    checkBox[0].checked = true;
+    checkBox[1].checked = false;
+    checkBox[2].checked = false;
+   
     
-    <p></p>
+    toggleOutput()
+ } )
+ checkField[1].addEventListener('click', () => { 
+    checkBox[0].checked = false;
+    checkBox[1].checked = true;
+    checkBox[2].checked = false;
     
-<button class='btn-24'>se mere</button>
-    <div class="stats">
-      <div class="stats__item is-visible" data-module-reveal="up" data-reveal-delay="">
-      <div class="stats__content">
-                <p class="stats__stat">10</p>
+    toggleOutput()
+ } )
+ checkField[2].addEventListener('click', () => { 
+    checkBox[0].checked = false;
+    checkBox[1].checked = false;
+    checkBox[2].checked = true;
+    
+    toggleOutput()
+ } )
+ toggleOutput()
+function toggleOutput() {
+  if(checkBox[0].checked){
+     field.classList.remove('opacityOne');
+   field.classList.add('opacityZ');
+   setTimeout(() => {
+    field.classList.add('opacityOne');
+    field.classList.remove('opacityZ');
+}, "300");
+        checkField[0].style.borderBottom = "1px solid #7dc4af";
+        checkFieldText[0].style.color = '#7dc4af';
+        checkField[1].style.borderBottom = "1px solid gray";
+        checkFieldText[1].style.color = '#fbfbfb';
+        checkField[2].style.borderBottom = "1px solid gray";
+        checkFieldText[2].style.color = '#fbfbfb';
+        /* checkField[3].style.borderBottom = "1px solid gray";
+        checkFieldText[3].style.color = '#fbfbfb'; */
+        headerBox.innerHTML = 'Bedre bundlinje 2023';
+        imgTitle.innerHTML = 'Quick-Analyse'
+        btn.innerHTML = 'Start nu';
+        statOne.innerHTML = 'Optimer';
+        statOneT.innerHTML = 'din bundlinje 2023 med et indblik i din logistiske strategi og optimeringsmuligheder.';
+        statTwo.innerHTML = '5-15%';
+        statTwoT.innerHTML = 'På bare fire måneder kan vi forbedre din EBIT med 5%-15%.';
+        
+        textBox.innerHTML = `
+Logistikoptimering giver en bedre bundlinje allerede inden for få måneder og kan bidrage til, at EBIT for 2023 ender bedre end forventet.<br> Mens vi venter på, at kurven vender, og at verdensmarkederne heler, kan du proaktivt sikre en bedre bundlinje i 2023.
+`
+         imgBox.src = "https://i.ibb.co/bN9xwYL/Quick-analyse-Bedre-bundlinje.jpg";
 
-                <p class="stats__description">years of eCommerce sales growth in just 10 weeks</p>
-      </div>
+         return;
+    }
+    if(checkBox[1].checked){
+         field.classList.remove('opacityOne');
+   field.classList.add('opacityZ');
+   setTimeout(() => {
+    field.classList.add('opacityOne');
+    field.classList.remove('opacityZ');
+}, "300");
+        headerBox.innerHTML = 'Positivt cashflow';
+        imgTitle.innerHTML = 'Quick-Analyse'
+        checkField[0].style.borderBottom = "1px solid gray";
+        checkFieldText[0].style.color = '#fbfbfb';
+        checkField[1].style.borderBottom = "1px solid #7dc4af";
+        checkFieldText[1].style.color = '#7dc4af';
+        btn.innerHTML = 'Start nu';
+        checkField[2].style.borderBottom = "1px solid gray";
+        checkFieldText[2].style.color = '#fbfbfb';
+        /* checkField[3].style.borderBottom = "1px solid gray";
+        checkFieldText[3].style.color = '#fbfbfb'; */
+      
+        statOne.innerHTML = 'Garanti';
+        statOneT.innerHTML = 'Med No Cure – No Pay sikrer vi dig en sikker investering i vores logistikoptimering. ';
+        statTwo.innerHTML = 'Analyse';
+        statTwoT.innerHTML = 'Vi tilbyder dig en gratis analyse, så vi sammen kan forbedre jeres logistik.  ';
 
-                    
-          </div>
-      <div class="stats__item is-visible" data-module-reveal="up" data-reveal-delay="">
-      <div class="stats__content">
-                <p class="stats__stat">51%</p>
+        textBox.innerHTML = `Vi arbejder resultatorienteret med logistikoptimering. Det betyder, at vores honorar er direkte knyttet til, at vi kan skabe et positivt cashflow for din virksomhed.
+<br><br> Grib muligheden for at påvirke økonomien i 2023.
+`
+/* Vi ved, at din tid er kostbar – og blot én time af din tid kan betyde en betydelig økonomisk gevinst for din virksomhed på et tidspunkt, hvor det betyder mere end nogensinde før. */
+         imgBox.src = "https://i.ibb.co/m9fJkN2/Quick-analyse-cashflow.jpg";
+         checkBox[0].checked = false;
+         return;
+    }
+    else if(checkBox[2].checked){
+         field.classList.remove('opacityOne');
+   field.classList.add('opacityZ');
+   setTimeout(() => {
+    field.classList.add('opacityOne');
+    field.classList.remove('opacityZ');
+}, "300");
+        headerBox.innerHTML = 'Direkte til logistik-analysen?';
+        imgTitle.innerHTML = 'Quick-Analyse '
+        checkField[0].style.borderBottom = "1px solid gray";
+        checkFieldText[0].style.color = '#fbfbfb';
+        checkField[1].style.borderBottom = "1px solid gray";
+        checkFieldText[1].style.color = '#fbfbfb';
+        checkField[2].style.borderBottom = "1px solid #7dc4af";
+        checkFieldText[2].style.color = '#7dc4af';
+        /* checkField[3].style.borderBottom = "1px solid gray";
+        checkFieldText[3].style.color = '#fbfbfb'; */
+        btn.innerHTML = 'Få en analyse';
+        statOne.innerHTML = 'Gratis'
+        statOneT.innerHTML = 'En logistik-analyse er uden beregning, og alle forslåede implementeringer er uforpligtende'
+        statTwo.innerHTML = 'Overblik'
+        statTwoT.innerHTML = 'Få et gratis overblik på din logistik uagtet om forslåede implementeringer accepteres.'
+        textBox.innerHTML = `Hvis du har en større logistisk opsætning, er det efter vores erfaring bedre at vælge en logistikanalyse fra første klik, da der med høj sandsynlighed er rum for optimering i strategien.<br><br> Med logistik-analysen skaber vi en komplet optegnelse af jeres logistiske strategi og finder frem til profitable indsatsområder. `
+        
+         imgBox.src = "https://i.ibb.co/hXSyZJX/Logistik-analyse-forside-logistik-analyse-banner.jpg";
+         checkBox[0].checked = false;
+         checkBox[1].checked = false;
+         return;
+    }
+        
+}
 
-                <p class="stats__description margin-none">transportation cost savings with more flexible fulfillment locations</p>
-      </div>
-
-                    
-          </div>
-  </div>
+</script> -->
 
 
 
 
-
-</div>
-</div>
-
-</div>
-
-
-
-
-<div class="boxContainer">
+<!-- <div class="boxContainer">
     <div class="containerImg">
     <span>
         <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/bgeff.webp" alt="">
     </span>
     <span data-aos="fade-down-right">
-        <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/Morten.webp" alt="">
+        <img class='top-fix' src="https://www.folklor-mersch.lu/images/sursite/Photos-Coming-Soon.jpg" alt="">
     </span>
     
     </div>
     <div class="containerText">
-        <h2>Morten</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, animi? Magnam voluptatibus voluptate error deleniti in assumenda omnis ut fugiat animi, earum minus vel ex excepturi nobis explicabo. Laboriosam perferendis voluptatem deserunt quae adipisci cum consequuntur, molestiae harum ex voluptates!</p>
+        <h2>Spar 10%-30% i transportomkostninger</h2>
+        <p>Efter kun 4 måneder skaber vi besparelser på jeres transportposter svarende til 10%-30% af de samlede transportudgifter, dette gøres ved hjælp af vores logistiske analyser. <br>
+Vi kan også spare jeres virksomhed for penge i logistikken – anmod om en Quick-analyse i dag og få resultaterne i morgen.
+</p>
         <button class='btn-24'>sup</button>
+    </div>
+</div>
+
+ -->
+
+
+
+
+
+
+
+
+ <div class="boxContainer">
+    <div class="containerImg">
+    <span>
+        <?php echo "<img src='".get_stylesheet_directory_uri()."/dist/img/bgeff.webp' \>" ?>
+    </span>
+    <span  data-aos="fade-down-right">
+    <?php echo "<img class='top-fix' src='".get_stylesheet_directory_uri()."/dist/img/kandetbetalesig.webp' \>" ?>
+    </span>
+    
+    </div>
+    <div class="containerText">
+        <h2>Kan det betale sig</h2>
+        <p>Det spørgsmål som vi ofte hører er: <br> kan det betale sig og skaber det værdi for os ? <br>
+Ja altid! <br>- en professionel ekstern vurdering af jeres nuværende logistik setup giver jer en bekræftelse og
+samtidig også en større tryghed omkring jeres nuværende setup er rigtigt set i forhold til jeres behov.</p>
+        <button class='btn-24'>CTA</button>
     </div>
 </div>
 
@@ -121,18 +233,22 @@ get_header()
 <div class="boxContainer containerRight">
     <div class="containerImg">
         <span>
-            <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/bgeff.webp" alt="">
+       
+        <?php echo "<img src='".get_stylesheet_directory_uri()."/dist/img/bgeff.webp' \>" ?>
         </span>
         <span data-aos="fade-down-left"
         >
-            <img src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <?php echo "<img class='top-fix' src='".get_stylesheet_directory_uri()."/dist/img/derforquick.webp' \>" ?>
         </span>
         
     </div>
     <div class="containerText">
-        <h2>Morten</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, animi? Magnam voluptatibus voluptate error deleniti in assumenda omnis ut fugiat animi, earum minus vel ex excepturi nobis explicabo. Laboriosam perferendis voluptatem deserunt quae adipisci cum consequuntur, molestiae harum ex voluptates!</p>
-        <button class='btn-24'>sup</button>
+        <h2>Derfor Quick-Analyse</h2>
+        <p>Vores store erfaringer fra tidligere analyser og en generel stor know-how fra transportmarkedet gør at vi
+med vort førstehånds indtryk har muligheden for i fællesskab med jer at vurdere potentialet i netop jeres
+virksomhed og så sammen beslutte om der er grundlag for at starte en mere dybdegående logistik analyse.
+</p>
+        <button class='btn-24'>CTA</button>
     </div>
 </div>
 
@@ -142,54 +258,10 @@ get_header()
 
 
 
-<div class='faqs'>
-	
-	<div class='img-container'>
-	
-	<img class='img-changer' src="https://images.pexels.com/photos/5355901/pexels-photo-5355901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-	</div>
-	
-	
-	
-	  <div  class="container-body">
-	    <div  class="container">
-	      <h2>Frequently Asked Questions</h2>
-	      <div class="accordion">
-	        <div class="accordion-item">
-	          <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes ?</span><span class="icon" aria-hidden="true"></span></button>
-	          <div class="accordion-content">
-	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-	          </div>
-	        </div>
-	        <div class="accordion-item">
-	          <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
-	          <div class="accordion-content">
-	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-	          </div>
-	        </div>
-	        <div class="accordion-item">
-	          <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
-	          <div class="accordion-content">
-	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-	          </div>
-	        </div>
-	        <div class="accordion-item">
-	          <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
-	          <div class="accordion-content">
-	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-	          </div>
-	        </div>
-	        <div class="accordion-item">
-	          <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
-	          <div class="accordion-content">
-	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	
-	</div>
+
+
+
+
 
 
 
