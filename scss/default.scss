@@ -4,7 +4,7 @@ $main: #2e2b6e;
 $sub: #11122a;
 $black: #191919;
 $white: #fbfbfb;
-$green: #7dc4af;
+$green: #f33615;
 
 @media only screen and (max-width: 40em) {
   html {
@@ -45,8 +45,36 @@ body {
   max-width: 1640px;
 }
 b {
-  color: red;
+  color: $main;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: relative;
+  @include mq_phone{
+    font-size: 3rem;
+    text-align: center;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.125rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 0.75rem;
+    z-index: 1;
+    filter: contrast(10%);
+    filter: grayscale(250%);
+    filter: brightness(0);
+
+    filter: hue-rotate(183deg);
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mq_phone{
+      height: 1.15rem;
+    }
+  }
 }
+
 br {
   content: "";
   margin: 3em;
@@ -65,6 +93,7 @@ h2 {
   }
   @include mq_phone {
     font-size: 3.8rem;
+    line-height: 3rem;
   }
 }
 h3 {
@@ -82,7 +111,7 @@ p {
     font-size: 1.3rem;
   }
   @include mq_phone {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 }
 .elementor-location-header nav {
@@ -149,13 +178,17 @@ header {
   border: 0 solid;
   box-sizing: border-box;
   transform: scale(0.9);
+  
 }
 .btn-24 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
   background-color: $sub;
   background-image: none;
-
+  @include mq_phone{
+    transform: scale(1.1);
+    margin: 2em .3em 0 .3em !important;
+  }
   color: $sub;
   cursor: pointer;
   /*   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,

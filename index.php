@@ -36,7 +36,9 @@ get_header()
                     <source type="video/mp4" src="https://d1n9pjnquucpl9.cloudfront.net/images/Flexe-driving-aerial_2021-05-26-211556_anvn.mp4"></video>
         <div class="bannerBox">
         <h1>Velkommen til Toftgaard Consulting</h1>
-        <h2>Optimizing Made<br> Easy</h2> <!-- Wir kümmern uns um Sie -->
+        <h2 class='headOne'>Optimizing</h2> <!-- Wir kümmern uns um Sie -->
+        <h2 class='headTwo'>Made</h2>
+        <h2 class='headThree'>Easy</h2>
         <div class='button-row'>
             <button class='btn-24'>knap1</button>
             <button class='btn-24'>knap2</button>
@@ -45,12 +47,37 @@ get_header()
     </div>
 </div>
 
+<script>
+ 
 
+        // wait until DOM is ready
+document.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOM loaded");
+
+  //wait until images, links, fonts, stylesheets, and js is loaded
+  window.addEventListener(
+    "load",
+    function (e) {
+      //custom GSAP code goes here
+      // This tween will rotate an element with a class of .my-element
+      const timeline = gsap.timeline({defaults: {duration: 1, delay: .5}})
+timeline
+  
+  .from('.bannerBox h2', {x: '-100%', ease: '`power1`', stagger: .5
+        })
+        
+
+      console.log("window loaded");
+    },
+    false
+  );
+});
+</script>
 
 
 
 <div class='textField'>
-<object data="/DinKøkkenChef/DKM files/balausta-isotipo.svg" class="objectRight" type=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257px" height="257px" viewBox="0 0 257 257" version="1.1">
+<object data="/DinKøkkenChef/DKM files/balausta-isotipo.svg" class="objectLeft" type=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257px" height="257px" viewBox="0 0 257 257" version="1.1">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -65,7 +92,8 @@ get_header()
         </g>
     </g>
 </svg></object>
-<div><h2 data-aos="fade-right">Dine muligheder for optimering</h2>
+
+<div><h2 class='phone-header' data-aos="fade-right">Dine muligheder for optimering</h2>
 <div class='corner'> </div>
 
 <p>Hos Toftgaard Consulting tilbyder vi logistikanalyser, emballage og palle management løsninger.<br>
@@ -82,9 +110,9 @@ forskellige palletyper gennem vores Pallet-Management-System (PMS).</p>
 <div class='topPageInfo'>
   <p>
 <br>
-Ud over at genere store besparelser på vores kunders logistik- og emballage / palleomkostninger ser vi det
-som vores primære opgave at I og jeres medarbejder står stærkere efter implementering af vort arbejde.<br>
-Vi tilstræber at finde løsninger der betyder <b>at det I gør i dag – det gør I bedre i morgen</b><br>
+Ud over at generere store besparelser på vores kunders logistik- og emballage/palleomkostninger ser vi det
+som vores primære opgave at I og jeres medarbejdere står stærkere efter implementering af vores arbejde.<br>
+<b>Alt det I gør i dag – det gør I bedre i morgen</b><br>
 Det er uden betydning om I er en mindre eller stor virksomhed – en ekstern vurdering af
 forsyningskæderne og logistikken resulterer ofte i tiltag der skaber forbedringer og besparelser.<br>
 Vi skaber synlige resultater inden for få måneder.
@@ -184,7 +212,7 @@ let statTwoT = document.querySelector('.statTwoText')
 let link = document.querySelector('.link');
 let miniTitle = document.querySelector('.miniTitle');
 
-checkField[0].style.borderBottom = "1px solid #7dc4af";
+checkField[0].style.borderBottom = "1px solid #F33615";
         checkField[1].style.borderBottom = "1px solid gray";
         checkField[2].style.borderBottom = "1px solid gray";
         /* checkField[3].style.borderBottom = "1px solid gray"; */
@@ -229,8 +257,8 @@ function toggleOutput() {
     field.classList.add('opacityOne');
     field.classList.remove('opacityZ');
 }, "300");
-        checkField[0].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[0].style.color = '#7dc4af';
+        checkField[0].style.borderBottom = "1px solid #F33615";
+        checkFieldText[0].style.color = '#F33615';
         checkField[1].style.borderBottom = "1px solid gray";
         checkFieldText[1].style.color = '#fbfbfb';
         checkField[2].style.borderBottom = "1px solid gray";
@@ -266,8 +294,8 @@ emballage løsninger, pallet-management-system, interne strukturer, processer og
 }, "300");
         checkField[0].style.borderBottom = "1px solid gray";
         checkFieldText[0].style.color = '#fbfbfb';
-        checkField[1].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[1].style.color = '#7dc4af';
+        checkField[1].style.borderBottom = "1px solid #F33615";
+        checkFieldText[1].style.color = '#F33615';
         
         checkField[2].style.borderBottom = "1px solid gray";
         checkFieldText[2].style.color = '#fbfbfb';
@@ -283,7 +311,7 @@ emballage løsninger, pallet-management-system, interne strukturer, processer og
         miniTitle.innerHTML = 'Logistik Analyse'
         /* En fuldarbejdet logistik analyse  & tager i gennemsnit 7 dage, & kan udføres på alle virksomhedstyper  */
         
-        textBox.innerHTML = `Med vores <b>Logistik Analyse</b> skaber vi et dybdegående overblik af jeres nuværende logistik setup. <br> Vores erfaringer siger at 98% af de virksomheder vi er i dialog med kan optimere deres logistik
+        textBox.innerHTML = `Med vores Logistik Analyse skaber vi et dybdegående overblik af jeres nuværende logistik setup. <br> Vores erfaringer siger at 98% af de virksomheder vi er i dialog med kan optimere deres logistik
 omkostninger med 10-30%.
 
 `
@@ -305,8 +333,8 @@ omkostninger med 10-30%.
         checkFieldText[0].style.color = '#fbfbfb';
         checkField[1].style.borderBottom = "1px solid gray";
         checkFieldText[1].style.color = '#fbfbfb';
-        checkField[2].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[2].style.color = '#7dc4af';
+        checkField[2].style.borderBottom = "1px solid #F33615";
+        checkFieldText[2].style.color = '#F33615';
         /* checkField[3].style.borderBottom = "1px solid gray";
         checkFieldText[3].style.color = '#fbfbfb'; */
         link.href="paletten-management";
@@ -319,7 +347,7 @@ omkostninger med 10-30%.
 paller. <br> Sammen med vores partner GPKollund råder vi over specialister med mere
 20 års omfattende viden inden for palleindustrien.`
         
-         imgBox.src = <?php echo "'".get_stylesheet_directory_uri()."/dist/img/Palleten-Management.webp'" ?>
+         imgBox.src = <?php echo "'".get_stylesheet_directory_uri()."/dist/img/pallebanner.webp'" ?>
         
          return;
     }
@@ -362,7 +390,7 @@ paller. <br> Sammen med vores partner GPKollund råder vi over specialister med 
     </div>
     <div class="containerText">
         <h2>Bedre bundlinje på få mdr.</h2>
-        <p>Logistikomkostningerne udgør ofte en mindre del af virksomhedens totale omkostninger og får derfor også
+        <p>Logistikomkostningerne udgør ofte en mindre del af virksomhedens totale omkostninger og får derfor
 sjældent den opmærksomhed som den egentlig burde have. <br>
 Logistikoptimering giver en bedre bundlinje allerede inden for få måneder og kan bidrage til at dit
 regnskabsår ender med et bedre resultat end forventet.</p>
@@ -444,7 +472,7 @@ jQuery(document).ready(function ($) {
     <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1548008116-bcfec1f4c812?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ" /></div>
     <h2 class="title" data-cta="Grab a board →">Surf's Up!</h2>
 </div>
-<div class="promo" style="--overlay-color: dark#7dc4af">
+<div class="promo" style="--overlay-color: dark#F33615">
     <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1569335048491-5fb94951e885?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ" /></div>
     <h2 class="title" data-cta="Take a walk →">Day Hikes</h2>
 </div>

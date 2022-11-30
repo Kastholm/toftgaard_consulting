@@ -4,7 +4,7 @@ add_theme_support( 'menus' );
 function custom_styles() {
      wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/styles.css' );
      
-     wp_register_style( 'font-awesome', ' https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' );
+     wp_register_style( 'font-awesome', ' https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' );
      wp_enqueue_style('font-awesome');
 
      wp_register_style( 'font', 'https://use.typekit.net/fiv2nza.css' );
@@ -22,6 +22,12 @@ function custom_styles() {
      wp_register_script( 'aos-script', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.0/aos.js');
      wp_enqueue_script('aos-script');
      
+     wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js', array(), false, true );
+
+     wp_enqueue_script( 'gsap-st', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js', array('gsap-js'), false, true );
+
+     wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . '/js/scripts.js', array('gsap-js'), false, true );
+
      wp_register_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', null, null, true );
      wp_enqueue_script('jquery');
      

@@ -31,12 +31,14 @@ get_header()
 <div class="banner">
         <div class='bgOverlay'>
           <div class='video' id="bannerVideo"></div>
-        <!-- <video id="bannerVideo" id="bannerVideo" autoplay="" muted="" loop="" playsinline="">
+        <video id="bannerVideo" id="bannerVideo" autoplay="" muted="" loop="" playsinline="">
                         Your browser does not support the video tag.
-                    <source type="video/mp4" src="https://i.ibb.co/Q8N3ZjC/Get-Paid-Stock-com-6373c601e5c08.jpg"></video> -->
+                    <source type="video/mp4" src="https://d1n9pjnquucpl9.cloudfront.net/images/Flexe-driving-aerial_2021-05-26-211556_anvn.mp4"></video>
         <div class="bannerBox">
         <h1>Velkommen til Toftgaard Consulting</h1>
-        <h2>Optimizing Made<br> Easy</h2> <!-- Wir kümmern uns um Sie -->
+        <h2 class='headOne'>Optimizing</h2> <!-- Wir kümmern uns um Sie -->
+        <h2 class='headTwo'>Made</h2>
+        <h2 class='headThree'>Easy</h2>
         <div class='button-row'>
             <button class='btn-24'>knap1</button>
             <button class='btn-24'>knap2</button>
@@ -45,12 +47,37 @@ get_header()
     </div>
 </div>
 
+<script>
+ 
 
+        // wait until DOM is ready
+document.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOM loaded");
+
+  //wait until images, links, fonts, stylesheets, and js is loaded
+  window.addEventListener(
+    "load",
+    function (e) {
+      //custom GSAP code goes here
+      // This tween will rotate an element with a class of .my-element
+      const timeline = gsap.timeline({defaults: {duration: 1, delay: .5}})
+timeline
+  
+  .from('.bannerBox h2', {x: '-100%', ease: '`power1`', stagger: .5
+        })
+        
+
+      console.log("window loaded");
+    },
+    false
+  );
+});
+</script>
 
 
 
 <div class='textField'>
-<object data="/DinKøkkenChef/DKM files/balausta-isotipo.svg" class="objectRight" type=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257px" height="257px" viewBox="0 0 257 257" version="1.1">
+<object data="/DinKøkkenChef/DKM files/balausta-isotipo.svg" class="objectLeft" type=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257px" height="257px" viewBox="0 0 257 257" version="1.1">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -65,52 +92,46 @@ get_header()
         </g>
     </g>
 </svg></object>
-<div><h2 data-aos="fade-right">Dine muligheder for optimering med No Cure – No Pay</h2>
+
+<div><h2 data-aos="fade-right">Dine muligheder for optimering</h2>
 <div class='corner'> </div>
-<div class="stats">
-      <div class="stats__item is-visible" data-module-reveal="up" data-reveal-delay="">
-      <div class="stats__content">
-                <p data-aos="fade-up" class="stats__stat">30 års</p>
 
-                <p data-aos="fade-up" class="stats__description">erfaring indenfor emballage-, palle- og logistikindustrien.</p>
-      </div>
+<p>Hos Toftgaard Consulting tilbyder vi logistikanalyser, emballage og palle management løsninger.<br>
+Gennem de seneste 20 år har vores team af specialister hjulpet flere hundrede internationale virksomheder
+med optimering af deres logistik, ligesom vi har opbygget en platform hvor vi har håndteret millioner af
+forskellige palletyper gennem vores Pallet-Management-System (PMS).</p>           
 
+   
                     
-          </div>
-      <div class="stats__item is-visible" data-module-reveal="up" data-reveal-delay="">
-      <div class="stats__content">
-                <p data-aos="fade-up" class="stats__stat">10-30%</p>
 
-                <p data-aos="fade-up" class="stats__description">besparelse i logistikomkostninger på kun 4 måneder.</p>
-      </div>
-
-                    
-          </div>
-  </div>
+  
 </div>
 
 <div class='topPageInfo'>
-  <p>Toftgaard Consulting tilbyder dig et hold af specialister indenfor emballage-, palle- og logistikindustrien.
-  <br>Vi har med 30 års erfaring hjulpet virksomheder med at nedsætte transport- og emballageomkostninger, samt optimere Co2 udledninger og touchpoints for virksomheders interne flåder (lastbiler).<br>
-Det er uden betydning om i er en lille, mellemstor eller gigant virksomhed. En ekstern vurdering af forsyningskæder og logistik resulterer ofte i tiltag der skaber besparelser for virksomheder indenfor få måneder.
-<!-- <br><br>
-Vi tilbyder en logistisk analyse af jeres virksomhed der med eksterne briller gennemgår jeres logistik med henblik optimering af transportomkostninger, pallehåndtering, emballage mm. -->
-  
+  <p>
+<br>
+Ud over at generere store besparelser på vores kunders logistik- og emballage/palleomkostninger ser vi det
+som vores primære opgave at I og jeres medarbejdere står stærkere efter implementering af vores arbejde.<br>
+<b>Alt det I gør i dag – det gør I bedre i morgen</b><br>
+Det er uden betydning om I er en mindre eller stor virksomhed – en ekstern vurdering af
+forsyningskæderne og logistikken resulterer ofte i tiltag der skaber forbedringer og besparelser.<br>
+Vi skaber synlige resultater inden for få måneder.
   
   
   </p>
+  
 </div>
 </div>
 
 
 <div class="serviceChoose" id='navMenu'>
-
-  <div class="box">
+<div class="box">
     <span></span>
     <span></span>
     <span></span>
   </div>
 <nav data-aos="fade-up" class='serviceToggle'>
+  
   <span>
   <p>Quick-Analyse</p>
 <input type="checkbox" class='checkOne' checked>
@@ -121,7 +142,7 @@ Vi tilbyder en logistisk analyse af jeres virksomhed der med eksterne briller ge
         <input type="checkbox" class='checkTwo'>
     </span>
     <span>
-    <p>Pallehåndtering</p>
+    <p>Pallet-Management-System</p>
 <input type="checkbox" class='checkThree'>
     </span>
     
@@ -129,7 +150,11 @@ Vi tilbyder en logistisk analyse af jeres virksomhed der med eksterne briller ge
 <div class="serviceOutput">
 <!-- <div class='toggleImage'></div> -->
 <div data-aos="fade-up-right" class="promo" style="--overlay-color: #2e2b6e">
-    <div class="image-wrapper"><img class='toggleImg' src="https://www.electricmirror.com/wp-content/uploads/2022/05/image-coming-soon.jpg" /></div>
+    <div class="image-wrapper"><img class='toggleImg' src=<?php echo "'".get_stylesheet_directory_uri()."/dist/img/Quick-Analyse.webp'" ?> /> 
+    
+    
+  
+  </div>
     <h2 class="title imgTitle"></h2>
 </div>
 <div class='toggleText'>
@@ -187,7 +212,7 @@ let statTwoT = document.querySelector('.statTwoText')
 let link = document.querySelector('.link');
 let miniTitle = document.querySelector('.miniTitle');
 
-checkField[0].style.borderBottom = "1px solid #7dc4af";
+checkField[0].style.borderBottom = "1px solid #F33615";
         checkField[1].style.borderBottom = "1px solid gray";
         checkField[2].style.borderBottom = "1px solid gray";
         /* checkField[3].style.borderBottom = "1px solid gray"; */
@@ -232,8 +257,8 @@ function toggleOutput() {
     field.classList.add('opacityOne');
     field.classList.remove('opacityZ');
 }, "300");
-        checkField[0].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[0].style.color = '#7dc4af';
+        checkField[0].style.borderBottom = "1px solid #F33615";
+        checkFieldText[0].style.color = '#F33615';
         checkField[1].style.borderBottom = "1px solid gray";
         checkFieldText[1].style.color = '#fbfbfb';
         checkField[2].style.borderBottom = "1px solid gray";
@@ -246,19 +271,19 @@ function toggleOutput() {
 link.href="quick-analyse";
         statOne.innerHTML = 'Gratis';
         statOneT.innerHTML = 'Quick-Analyse udarbejdes uden beregning.';
-        statTwo.innerHTML = '1 dag';
-        statTwoT.innerHTML = 'Kan udføres på alle virksomhedstyper inden for 1 dag.';
+        statTwo.innerHTML = '8 timer';
+        statTwoT.innerHTML = 'Potentiale på 8 timer';
         miniTitle.innerHTML = 'Quick-Analyse'
         /* En fuldarbejdet logistik analyse kan på 1 uge udføres på alle virksomhedstyper */
         textBox.innerHTML = `
-En Quick-Analyse tjener formålet at få et klart overblik iht. din emballage, pallehåndtering og interne processer på et øjeblik. Så kan vi i fællesskab vurdere potentialet fra den hurtige analyse, og beslutte om der er grundlag for en logistik analyse.<br>
-Quick-Analysen udføres på blot 1 dag.`
+        Med en Quick – Analyse har vi muligheden for, at få et førstehånds indtryk af jeres setup, det omfatter bla.
+emballage løsninger, pallet-management-system, interne strukturer, processer og logistik.<br>
+`
 
 
 
-         imgBox.src = "https://www.electricmirror.com/wp-content/uploads/2022/05/image-coming-soon.jpg";
+         imgBox.src = <?php echo "'".get_stylesheet_directory_uri()."/dist/img/Quick-Analyse.webp'" ?>
          
-         return;
     }
     if(checkBox[1].checked){
       field.classList.remove('opacityOne');
@@ -269,8 +294,8 @@ Quick-Analysen udføres på blot 1 dag.`
 }, "300");
         checkField[0].style.borderBottom = "1px solid gray";
         checkFieldText[0].style.color = '#fbfbfb';
-        checkField[1].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[1].style.color = '#7dc4af';
+        checkField[1].style.borderBottom = "1px solid #F33615";
+        checkFieldText[1].style.color = '#F33615';
         
         checkField[2].style.borderBottom = "1px solid gray";
         checkFieldText[2].style.color = '#fbfbfb';
@@ -279,20 +304,19 @@ Quick-Analysen udføres på blot 1 dag.`
         headerBox.innerHTML = 'Skab et komplet overblik';
         imgTitle.innerHTML = 'Logistik Analyse'
         link.href="logistik-analyse";
-        statOne.innerHTML = '+90%';
-        statOneT.innerHTML = 'Af større danske virksomheder kan sparer penge & ressourcer.';
-        statTwo.innerHTML = '7 Dage';
-        statTwoT.innerHTML = 'Kan udføres på alle virksomhedstyper inden for 1 uge.';
+        statOne.innerHTML = '10-30%';
+        statOneT.innerHTML = 'besparelser på jeres logistikomkostninger inden for 4 måneder';
+        statTwo.innerHTML = '+ 200 ';
+        statTwoT.innerHTML = 'Logistik Analyser sikrer jer kompetence gennem en struktureret proces';
         miniTitle.innerHTML = 'Logistik Analyse'
         /* En fuldarbejdet logistik analyse  & tager i gennemsnit 7 dage, & kan udføres på alle virksomhedstyper  */
         
-        textBox.innerHTML = `Logistik analyse er en gennemarbejdet analyse.
-Den er med til at give et komplet og realitetstro billede af jeres virksomheds logistiske opsætning og fremvise hvor der er plads til forbedringer og besparelser.<br>
-Logistik analysen udføres på blot 1 uge.
+        textBox.innerHTML = `Med vores Logistik Analyse skaber vi et dybdegående overblik af jeres nuværende logistik setup. <br> Vores erfaringer siger at 98% af de virksomheder vi er i dialog med kan optimere deres logistik
+omkostninger med 10-30%.
 
 `
 
-         imgBox.src = "https://www.electricmirror.com/wp-content/uploads/2022/05/image-coming-soon.jpg";
+         imgBox.src = <?php echo "'".get_stylesheet_directory_uri()."/dist/img/Logistik-analyse.webp'" ?>
         
          return;
     }
@@ -303,25 +327,27 @@ Logistik analysen udføres på blot 1 uge.
     field.classList.add('opacityOne');
     field.classList.remove('opacityZ');
 }, "300");
-        headerBox.innerHTML = 'Profit på pallehåndtering';
+        headerBox.innerHTML = 'Pallet-Management-System';
         imgTitle.innerHTML = 'Paller '
         checkField[0].style.borderBottom = "1px solid gray";
         checkFieldText[0].style.color = '#fbfbfb';
         checkField[1].style.borderBottom = "1px solid gray";
         checkFieldText[1].style.color = '#fbfbfb';
-        checkField[2].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[2].style.color = '#7dc4af';
+        checkField[2].style.borderBottom = "1px solid #F33615";
+        checkFieldText[2].style.color = '#F33615';
         /* checkField[3].style.borderBottom = "1px solid gray";
         checkFieldText[3].style.color = '#fbfbfb'; */
         link.href="paletten-management";
-        statOne.innerHTML = 'A-D'
-        statOneT.innerHTML = 'Handler med europæiske paller A, B, C & D paller.'
-        statTwo.innerHTML = 'Garanti'
-        miniTitle.innerHTML = 'Pallehåndtering'
-        statTwoT.innerHTML = `Vi garanterer værdi med Gp>kollund's erfaring inden for paller.`
-        textBox.innerHTML = `Vi tilbyder i samarbejde med Gp>kollund en omfattende viden inden for pallehåndtering. Vi er i stand til at restaurere, upcycle, og udveksle standardiserede paller til de internationale klassifikationssystemer for europæiske paller.<br>Skift besværet ud med indtægt.`
+        statOne.innerHTML = 'Rigtig pris'
+        statOneT.innerHTML = 'Sikres igennem direkte kontakter.'
+        statTwo.innerHTML = 'Bæredygtig'
+        miniTitle.innerHTML = 'Palle-Management-System'
+        statTwoT.innerHTML = `Mindre CO2 udledning gennem stærk logistik.`
+        textBox.innerHTML = `Vi tilbyder et stærkt Pallet-Management-System koncept hvor vi køber og sælger alle former for
+paller. <br> Sammen med vores partner GPKollund råder vi over specialister med mere
+20 års omfattende viden inden for palleindustrien.`
         
-         imgBox.src = "https://www.electricmirror.com/wp-content/uploads/2022/05/image-coming-soon.jpg";
+         imgBox.src = <?php echo "'".get_stylesheet_directory_uri()."/dist/img/pallebanner.webp'" ?>
         
          return;
     }
@@ -354,21 +380,20 @@ Logistik analysen udføres på blot 1 uge.
 <div class="boxContainer">
     <div class="containerImg">
     <span>
-        <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/bgeff.webp" alt="">
+        
+        <?php echo "<img src='".get_stylesheet_directory_uri()."/dist/img/bgeff.webp' \>" ?>
     </span>
     <span  data-aos="fade-down-right">
-        <img class='top-fix' src="https://www.folklor-mersch.lu/images/sursite/Photos-Coming-Soon.jpg" alt="">
+        <?php echo "<img  src='".get_stylesheet_directory_uri()."/dist/img/Bedre-bundlinje.webp' \>" ?>
     </span>
     
     </div>
     <div class="containerText">
-        <h2>Opdag dit potentiale</h2>
-        <p>Ikke alle potentielle kunder er overbevist om sit potentiale, og mange virksomheder har allerede truffet forskellige tiltag for at forbedre logistikken gennem årene, derfor er spørgsmålet vi ofte hører:
-<br><br>
-"Er det værd at tjekke ud?"
-<br><br>
-Ja, altid – et eksternt syn giver dig sikkerhed for, at din transport og logistik er sat korrekt op ift. din virksomhedstype.
-For at gøre denne proces nemmere tilbyder vi dig en hurtig analyse.</p>
+        <h2>Bedre bundlinje på få mdr.</h2>
+        <p>Logistikomkostningerne udgør ofte en mindre del af virksomhedens totale omkostninger og får derfor
+sjældent den opmærksomhed som den egentlig burde have. <br>
+Logistikoptimering giver en bedre bundlinje allerede inden for få måneder og kan bidrage til at dit
+regnskabsår ender med et bedre resultat end forventet.</p>
         <button class='btn-24'>CTA</button>
     </div>
 </div>
@@ -377,16 +402,18 @@ For at gøre denne proces nemmere tilbyder vi dig en hurtig analyse.</p>
 <div class="boxContainer containerRight">
     <div class="containerImg">
         <span>
-            <img src="http://localhost:8080/toftgaard_consulting/wp-content/uploads/2022/11/bgeff.webp" alt="">
+       
+           <?php echo "<img src='".get_stylesheet_directory_uri()."/dist/img/bgeff.webp' \>" ?>
         </span>
         <span data-aos="fade-down-left"
         >
-            <img src="https://www.folklor-mersch.lu/images/sursite/Photos-Coming-Soon.jpg" alt="">
+       
+            <img class='top-fix' src=<?php echo "'".get_stylesheet_directory_uri()."/dist/img/risikofrit.webp'" ?>   alt=""/>
         </span>
         
     </div>
     <div class="containerText">
-        <h2>5%-15% stigning i EBIT</h2>
+        <h2>Risikofrit</h2>
         <p>Vi skaber en positiv dialog med jeres logistikafdelingen, og sammen med vores logistikeksperter reducerer vi dine logistikomkostninger med omkring 20% - med uændret kvalitet i forbindelse til jeres service/produkt.                              <br>Vores honorarer er i de fleste tilfælde succesbaserede, det giver flere væsentlige fordele i længden for dig. <br>
 Det er risikofrit og skaber positivt cashflow i din virksomhed.
 </p>
@@ -445,7 +472,7 @@ jQuery(document).ready(function ($) {
     <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1548008116-bcfec1f4c812?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ" /></div>
     <h2 class="title" data-cta="Grab a board →">Surf's Up!</h2>
 </div>
-<div class="promo" style="--overlay-color: dark#7dc4af">
+<div class="promo" style="--overlay-color: dark#F33615">
     <div class="image-wrapper"><img src="https://images.unsplash.com/photo-1569335048491-5fb94951e885?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ" /></div>
     <h2 class="title" data-cta="Take a walk →">Day Hikes</h2>
 </div>
@@ -504,6 +531,19 @@ efter implementering</p>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 <?php
 the_content();

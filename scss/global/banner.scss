@@ -2,10 +2,16 @@
 @import "../mix-ins.scss";
 
 .qa-banner {
-  background-image: url("//localhost:3000/toftgaard_consulting/wp-content/themes/toftgarrd_consulting/dist/img/Quick-Analyse.webp");
+  background-image: url("https://i.ibb.co/Pttvx0Z/Quick-Analyse.webp");
 }
 .la-banner {
-  background-image: url("//localhost:3000/toftgaard_consulting/wp-content/themes/toftgarrd_consulting/dist/img/Logistik-analyse.webp");
+  background-image: url("https://i.ibb.co/55rtNJ9/Logistik-analyse.webp");
+}
+.pm-banner {
+  background-image: url("https://i.ibb.co/DgyVs9X/pallebanner.webp");
+}
+.k-banner {
+  background-image: url("https://i.ibb.co/YP05GJc/kontaktnu.webp");
 }
 
 .content {
@@ -65,6 +71,10 @@
       }
     }
   }
+  svg {
+    width: 1.9em;
+    padding: 0 0.5em;
+  }
   .text {
     border-right: 2px solid black;
     width: 50vw;
@@ -73,6 +83,7 @@
       width: 100vw;
       max-width: none;
     }
+
     .innertext {
       max-width: 35em;
       padding: 4em 2em;
@@ -80,6 +91,9 @@
       height: fit-content;
       @include mq_tablet {
         margin: 0;
+      }
+      @include mq_phone{
+        max-width: 95vw;
       }
       * {
         margin: 0;
@@ -107,8 +121,8 @@
       font-size: 1.3rem;
     }
     @include mq_phone {
-      font-size: 1.5rem;
-      line-height: 1.9rem;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
     }
   }
 
@@ -149,7 +163,8 @@
     border-right: 2px solid black;
   }
   &::after {
-    content: "(logo) Toftgaard Consulting";
+    content: "Toftgaard Consulting";
+    font-weight: 500;
     position: absolute;
     margin-top: 2em;
     left: 5%;

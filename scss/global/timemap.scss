@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+@import "../mix-ins.scss";
+@import "../default.scss";
+
 // Responsive
 @mixin responsive() {
   @media only screen and (max-width: 767px) {
@@ -30,12 +32,14 @@ $timeline-container-width: 100%;
     }
     &-desc {
       margin: 0;
-
+      font-size: 1.3rem;
       box-sizing: border-box;
-      color: rgba(#fff, 0.7);
-
+      color: rgb(218, 209, 209);
       font-weight: normal;
-      line-height: 25px;
+      line-height: 35px;
+      @include mq_tablet {
+        font-size: 2rem;
+      }
     }
   }
   &:before {

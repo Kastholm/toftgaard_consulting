@@ -3,10 +3,10 @@
 .boxContainer {
   position: relative;
   display: grid;
-  
+
   .top-fix {
     margin-top: 3em !important;
-    @include mq_tablet{
+    @include mq_tablet {
       margin-top: 0;
     }
   }
@@ -14,7 +14,7 @@
   place-content: center;
   grid-auto-flow: column;
   margin: 0 auto;
-  height: 28em;
+  min-height: 28em;
   max-width: 1640px;
   @include mq_tablet {
     height: fit-content;
@@ -66,7 +66,41 @@
       padding: 0 0.8em;
     }
   }
+  b {
+    color: $main;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+    @include mq_phone{
+      font-size: 2.3rem;
+      text-align: center;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.125rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      height: 0.55rem !important;
+      z-index: 1;
+      filter: contrast(10%);
+      filter: grayscale(250%);
+      filter: brightness(0);
+
+      filter: hue-rotate(183deg);
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include mq_phone{
+        height: 1.05rem !important;
+      }
+    }
+  }
 }
+
+
+
+
 
 .containerRight {
   & div:nth-child(1) {

@@ -61,7 +61,7 @@
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
-  
+
   width: 400px;
   height: 300px;
 
@@ -75,17 +75,17 @@
 
 @keyframes loader {
   0% {
-    transform: scale(0.9);
-  }
-  20% {
     transform: scale(1.2);
   }
+  20% {
+    transform: scale(1.5);
+  }
   60% {
-    transform: scale(0.9);
+    transform: scale(1.2);
   }
   0%,
   100% {
-    background-image: url("https://i.ibb.co/dfdWRhV/Displaying-Toftgaard-blue-logo.png");
+    background-image: url("https://i.ibb.co/QbbX89X/logo.webp");
   }
 }
 
@@ -141,7 +141,7 @@
 }
 
 .progress-bar {
-  margin-top: 5em;
+  margin-top: 0em;
   border-radius: 60px;
   overflow: hidden;
   width: 100%;

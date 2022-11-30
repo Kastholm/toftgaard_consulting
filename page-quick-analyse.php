@@ -16,9 +16,9 @@ get_header()
 		<div class="border-top"></div>
 	<span class='innertext'>
 		<h1>Quick-Analyse, af jeres logistiske opsætning</h1>
-		<h2>Ikke alle virksomheder er overbeviste om deres optimerings potentiale. Ofte har de allerede selv gennem
-årerne foretaget forskellige tiltag til optimeringer i deres logistik og derfor mødes vi ofte også med en vis
-skepsis, når vi fremlægger vore teser.
+		<h2>Ikke alle virksomheder er overbeviste om deres optimerings potentiale. Ofte har de selv gennem
+årerne foretaget forskellige tiltag til optimeringer i deres logistik og derfor mødes vi ofte med en vis
+skepsis, når vi fremlægger vores teser.
 
 		</h2>
 	</span>
@@ -32,7 +32,35 @@ skepsis, når vi fremlægger vore teser.
 <div class="border-bot">
 </div>
 
+<script>
+ 
 
+        // wait until DOM is ready
+document.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOM loaded");
+
+  //wait until images, links, fonts, stylesheets, and js is loaded
+  window.addEventListener(
+    "load",
+    function (e) {
+      //custom GSAP code goes here
+      // This tween will rotate an element with a class of .my-element
+      const timeline = gsap.timeline({defaults: {duration: .6}})
+timeline
+.from('.innertext', {opacity: '0', ease: '`power1`', stagger: .2, delay: .5
+        })
+  .from('.border-top', {x: '-100%', ease: '`power1`', stagger: .5
+        })
+        
+         
+        
+
+      console.log("window loaded");
+    },
+    false
+  );
+});
+</script>
 
 
 
@@ -54,7 +82,7 @@ let statTwo = document.querySelector('.statTwo');
 let statTwoT = document.querySelector('.statTwoText')  
 let link = document.querySelector('.link');
 
-checkField[0].style.borderBottom = "1px solid #7dc4af";
+checkField[0].style.borderBottom = "1px solid #F33615";
         checkField[1].style.borderBottom = "1px solid gray";
         checkField[2].style.borderBottom = "1px solid gray";
         /* checkField[3].style.borderBottom = "1px solid gray"; */
@@ -90,8 +118,8 @@ function toggleOutput() {
     field.classList.add('opacityOne');
     field.classList.remove('opacityZ');
 }, "300");
-        checkField[0].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[0].style.color = '#7dc4af';
+        checkField[0].style.borderBottom = "1px solid #F33615";
+        checkFieldText[0].style.color = '#F33615';
         checkField[1].style.borderBottom = "1px solid gray";
         checkFieldText[1].style.color = '#fbfbfb';
         checkField[2].style.borderBottom = "1px solid gray";
@@ -124,8 +152,8 @@ Logistikoptimering giver en bedre bundlinje allerede inden for få måneder og k
         imgTitle.innerHTML = 'Quick-Analyse'
         checkField[0].style.borderBottom = "1px solid gray";
         checkFieldText[0].style.color = '#fbfbfb';
-        checkField[1].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[1].style.color = '#7dc4af';
+        checkField[1].style.borderBottom = "1px solid #F33615";
+        checkFieldText[1].style.color = '#F33615';
         btn.innerHTML = 'Start nu';
         checkField[2].style.borderBottom = "1px solid gray";
         checkFieldText[2].style.color = '#fbfbfb';
@@ -158,8 +186,8 @@ Logistikoptimering giver en bedre bundlinje allerede inden for få måneder og k
         checkFieldText[0].style.color = '#fbfbfb';
         checkField[1].style.borderBottom = "1px solid gray";
         checkFieldText[1].style.color = '#fbfbfb';
-        checkField[2].style.borderBottom = "1px solid #7dc4af";
-        checkFieldText[2].style.color = '#7dc4af';
+        checkField[2].style.borderBottom = "1px solid #F33615";
+        checkFieldText[2].style.color = '#F33615';
         /* checkField[3].style.borderBottom = "1px solid gray";
         checkFieldText[3].style.color = '#fbfbfb'; */
         btn.innerHTML = 'Få en analyse';
@@ -195,7 +223,7 @@ Logistikoptimering giver en bedre bundlinje allerede inden for få måneder og k
     <div class="containerText">
         <h2>Spar 10%-30% i transportomkostninger</h2>
         <p>Efter kun 4 måneder skaber vi besparelser på jeres transportposter svarende til 10%-30% af de samlede transportudgifter, dette gøres ved hjælp af vores logistiske analyser. <br>
-Vi kan også spare jeres virksomhed for penge i logistikken – anmod om en Quick-analyse i dag og få resultaterne i morgen.
+Vi kan også spare jeres virksomhed for penge på logistikposten – anmod om en Quick-analyse i dag og få resultaterne i morgen.
 </p>
         <button class='btn-24'>sup</button>
     </div>
@@ -210,7 +238,7 @@ Vi kan også spare jeres virksomhed for penge i logistikken – anmod om en Quic
 
 
 
- <div class="boxContainer">
+ <div style='border-top: 2px dotted black;' class="boxContainer">
     <div class="containerImg">
     <span>
         <?php echo "<img src='".get_stylesheet_directory_uri()."/dist/img/bgeff.webp' \>" ?>
@@ -223,8 +251,7 @@ Vi kan også spare jeres virksomhed for penge i logistikken – anmod om en Quic
     <div class="containerText">
         <h2>Kan det betale sig</h2>
         <p>Det spørgsmål som vi ofte hører er: <br> kan det betale sig og skaber det værdi for os ? <br>
-Ja altid! <br>- en professionel ekstern vurdering af jeres nuværende logistik setup giver jer en bekræftelse og
-samtidig også en større tryghed omkring jeres nuværende setup er rigtigt set i forhold til jeres behov.</p>
+Ja altid! <br>- en professionel ekstern vurdering af jeres nuværende logistik setup giver jer en bekræftelse og en større tryghed omkring at opsætningen af jeres logistiske setup er korrekt i forhold til jeres behov.</p>
         <button class='btn-24'>CTA</button>
     </div>
 </div>
@@ -244,9 +271,9 @@ samtidig også en større tryghed omkring jeres nuværende setup er rigtigt set 
     </div>
     <div class="containerText">
         <h2>Derfor Quick-Analyse</h2>
-        <p>Vores store erfaringer fra tidligere analyser og en generel stor know-how fra transportmarkedet gør at vi
-med vort førstehånds indtryk har muligheden for i fællesskab med jer at vurdere potentialet i netop jeres
-virksomhed og så sammen beslutte om der er grundlag for at starte en mere dybdegående logistik analyse.
+        <p>Vores store erfaring fra tidligere analyser og en generel stor know-how fra transportmarkedet gør at vi
+med vores førstehåndsindtryk har muligheden for i fællesskab med jer at vurdere potentialet i netop jeres
+virksomhed og efterfølgende beslutte i samråd om der er grundlag for at starte en mere dybdegående logistik analyse.
 </p>
         <button class='btn-24'>CTA</button>
     </div>

@@ -6,7 +6,7 @@
   max-width: 100vw;
   margin: 0 auto;
   clip-path: polygon(0 0, 96% 0, 96% 100%, 0 100%);
-  animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s backwards;
+  /* animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0s backwards; */
   background-size: cover;
   background-position: 20%;
   min-height: 30em;
@@ -17,7 +17,7 @@
     position: absolute;
     /* display: none; */
     /* height: 36em; */
-    
+
     max-width: 100vw;
 
     top: 0;
@@ -45,15 +45,14 @@
   }
   h1 {
     font-size: 1.5rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
     font-family: Reckless, Georgia, Times, Times New Roman, serif;
     font-weight: 500;
-    animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-    color: $black;
+
+    color: $white;
   }
   h2 {
     font-size: 4.2rem;
-    margin: 0 0 0.5em 0;
 
     line-height: 0.95em;
     text-transform: uppercase;
@@ -64,7 +63,7 @@
     font-style: normal;
 
     text-decoration: none;
-    
+
     letter-spacing: 1.25px;
     color: $white;
     position: relative;
@@ -86,10 +85,12 @@
       right: auto;
       bottom: 0;
       left: -2%;
+
       border-left: 1px solid $main;
       width: 1px;
-      -webkit-transform: scaleY(1);
-      transform: scaleY(1);
+
+      -webkit-transform: scaleY(2);
+      transform: scaleY(2);
     }
     @include mq_tablet {
       font-size: 4.3rem;
@@ -98,6 +99,7 @@
   }
   button {
     width: fit-content;
+    margin-top: 2em;
   }
   .bannerBox {
     height: 33em;
@@ -126,16 +128,19 @@
   height: fit-content;
   position: relative;
   padding: 4em 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: $sub;
-  object {
+  .objectLeft {
     position: absolute;
     bottom: -100px;
     right: -150px;
+    filter: hue-rotate(180deg);
+    filter: saturate(0);
     @include mq_tablet {
       top: -100px;
     }
   }
+
   @include mq_tablet {
     grid-template-columns: repeat(auto-fit, minmax(max(100%, 10rem), 1fr));
     grid-auto-flow: row;
@@ -205,8 +210,44 @@
       padding: 0 0em;
     }
   }
+  span {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0 auto;
+
+    br {
+      content: "";
+      margin: 1.5em;
+      display: block;
+      font-size: 24%;
+    }
+  }
+}
+.point {
+  width: fit-content;
+  display: flex;
+  @include mq_phone {
+    margin-top: 1em;
+  }
+  p {
+    display: block !important;
+  }
+  svg {
+    width: 0.7em;
+    margin: 0 0em 0 2em;
+    @include mq_phone {
+      margin: 0 0em 0 1em;
+      min-width: 1.3em;
+    }
+  }
 }
 
+.phone-header {
+  @include mq_phone {
+    font-size: 4rem !important;
+  }
+}
 @keyframes image-in {
   from {
     clip-path: polygon(0 0, 96% 0, 96% 0, 0 0);
